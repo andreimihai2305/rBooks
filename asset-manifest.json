@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/andreimihai2305/rBooks/static/css/main.57655132.css",
+    "main.js": "/andreimihai2305/rBooks/static/js/main.e4dd2336.js",
+    "static/media/bookshelf.jpg": "/andreimihai2305/rBooks/static/media/bookshelf.a9d5b5fe86433a79d4ab.jpg",
+    "index.html": "/andreimihai2305/rBooks/index.html",
+    "main.57655132.css.map": "/andreimihai2305/rBooks/static/css/main.57655132.css.map",
+    "main.e4dd2336.js.map": "/andreimihai2305/rBooks/static/js/main.e4dd2336.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57655132.css",
+    "static/js/main.e4dd2336.js"
+  ]
+}
