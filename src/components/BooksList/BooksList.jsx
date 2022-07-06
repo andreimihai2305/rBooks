@@ -29,13 +29,29 @@ function BooksList() {
     const [books, setBooks] = useState(demoBooks);
     const listItems = books.map(book => <li key={book.title} className='book-title'>{book.title}</li>)
     return (
-        <div className='main-list'>
-            <h1 className='page-title'>Books List:</h1>
-            <ul  className='books-list'>
-                {listItems}
-            </ul>
+        <div className='page'>
+            <h1 className='page-title'>Your Books</h1>
+            <section className='main-section'>
+                <div className='books-list'>
+                    <h2 className='section-title'>Saved Books:</h2>
+                    <ul >
+                        {listItems}
+                    </ul>
+                </div>
+
+                <div className='books-list'>
+                    <h2 className='section-title'>Books You've read:</h2>
+                    <ul>
+                        {listItems}
+                    </ul>
+                </div>
+            </section>
         </div>
+        
+        
+
     );
 }
+
 
 export default BooksList;

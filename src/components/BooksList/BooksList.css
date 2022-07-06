@@ -1,6 +1,11 @@
+.main-section {
+    display: flex;
+}
+
 .page-title {
     margin-left: 1.5rem;
-    font-size: 2rem;
+    color: antiquewhite;
+    font-size: 2.2rem;
 }
 .book-title {
     color: antiquewhite;
@@ -10,18 +15,22 @@
     
 }
 
-.main-list {
-    margin-top: 1rem;
-    margin-left: 15vw;
-    background-color: #57423B;
-    border-radius: 15px;
-    display: inline-block;
-    width: 25vw;
-    box-shadow: 10px 10px 25px #3C2F2C;
+/* .main-section {
+
+} */
+
+.section-title {
+    color: white;
+    padding: 1rem;
+    font-size: 1.7rem;
+    margin: auto;
 }
 
 .books-list {
-    /* list-style: none; */
-    padding: 0;
-    margin-left: 5vw;
+    width: 25vw;
+    padding: 1.5rem;
+    margin: 1em auto;
+    background-color: #57423bf9;
+    border-radius: 15px;
+    box-shadow: 10px 10px 25px #3C2F2C;
 }
