@@ -5,11 +5,6 @@
     font-weight: 8  00;
     margin-left: 0.4em;
 }
-/* p {
-    font-size: 1.2rem;
-    margin: 0;
-    padding-block: 10px;
-} */
 
 .navbar-list {
     background-color: #9f856deb;
@@ -17,7 +12,7 @@
     display: flex;
     align-items: center;
     margin: 0px;
-    padding: 0px;  
+    padding: 0px;   
     border-bottom: 1px solid #9f856d;
     border-radius: 0 0 10px 10px;
 }
@@ -30,8 +25,9 @@ li {
 .link {
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: 500;
     font-family: 'Roboto' sans-serif;
-    color: black;
+    color: #3C2F2C;
     margin: 0;
     padding-block: 10px;
 }
