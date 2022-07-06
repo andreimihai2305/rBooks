@@ -1,12 +1,12 @@
 .logo {
     color: #423127;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
     font-weight: 800;
-    margin-left: 0.2em;
+    margin-left: 0.4em;
 }
 p {
-    font-size:1rem;
+    font-size: 1.2rem;
     margin: 0;
     padding-block: 10px;
 }

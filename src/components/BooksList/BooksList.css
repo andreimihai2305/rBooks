@@ -2,22 +2,16 @@
     display: flex;
 }
 
+.page {
+    height: 100%;
+}
+
 .page-title {
-    margin-left: 1.5rem;
-    color: antiquewhite;
-    font-size: 2.2rem;
+    margin-left: 1.8rem;
+    color: white;
+    text-shadow: 3px 3px 3px #3C2F2C;
+    font-size: 2.5rem;
 }
-.book-title {
-    color: antiquewhite;
-    font-size: 1.4rem;
-    padding-block: 1rem;
-    margin-left: 0;
-    
-}
-
-/* .main-section {
-
-} */
 
 .section-title {
     color: white;
@@ -28,9 +22,29 @@
 
 .books-list {
     width: 25vw;
+    height: 50vh;
+    overflow: scroll;
     padding: 1.5rem;
     margin: 1em auto;
     background-color: #57423bf9;
     border-radius: 15px;
-    box-shadow: 10px 10px 25px #3C2F2C;
+    box-shadow: 10px 10px 20px #3C2F2C;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  
+}
+.book {
+    color: antiquewhite;
+    font-size: 1.4rem;
+    padding-block: 0.3rem;
+    margin-left: 0;
+    
+}
+.book-info {
+    font-size: 1.2rem;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.books-list::-webkit-scrollbar {
+    display: none;
 }
