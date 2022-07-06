@@ -1,24 +1,33 @@
-h1 {
+.logo {
     color: #423127;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
+    font-weight: 800;
+    margin-left: 0.2em;
 }
 p {
     font-size:1rem;
+    margin: 0;
+    padding-block: 10px;
 }
 
 .navbar-list {
-    background-color: #9f856d;
+    background-color: #9f856deb;
     list-style: none;
     display: flex;
     align-items: center;
     margin: 0px;
-    padding: 0px;
-    height: 10vh;
-    /* box-shadow: 10px 15px 0px 10px black; */
+    padding: 0px;  
     border-bottom: 1px solid #9f856d;
     border-radius: 0 0 10px 10px;
 }
 li {
     padding: 10px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }
