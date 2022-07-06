@@ -41,7 +41,7 @@ function BooksList() {
     const [books, setBooks] = useState(demoBooks);
     const listItems = books.map(book => 
     <li key={book.title} className='book'>
-        {book.title}
+        <h3 className='book-title'>{book.title}</h3>
         <ul>
             <li className='book-info'>Author : {book.author}</li>
             <li className='book-info'>Year : {book.yearPublished}</li>
@@ -54,21 +54,21 @@ function BooksList() {
             <section className='main-section'>
 
                 <div className='books-list'>
-                    <h2 className='section-title'>Books in progress:</h2>
-                    <ul>
+                    <h2 className='section-title'>Books in progress :</h2>
+                    <ul className='book-ul'>
                         {listItems}
                     </ul>
                 </div>
                 <div className='books-list'>
-                    <h2 className='section-title'>Saved Books:</h2>
-                    <ul >
+                    <h2 className='section-title'>Saved Books :</h2>
+                    <ul className='book-ul'>
                         {listItems}
                     </ul>
                 </div>
 
                 <div className='books-list'>
-                    <h2 className='section-title'>Books You've read:</h2>
-                    <ul>
+                    <h2 className='section-title'>Books You've read :</h2>
+                    <ul className='book-ul'>
                         {listItems}
                     </ul>
                 </div>

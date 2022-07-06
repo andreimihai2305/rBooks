@@ -2,14 +2,14 @@
     color: #423127;
     font-size: 2rem;
     font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
-    font-weight: 800;
+    font-weight: 8  00;
     margin-left: 0.4em;
 }
-p {
+/* p {
     font-size: 1.2rem;
     margin: 0;
     padding-block: 10px;
-}
+} */
 
 .navbar-list {
     background-color: #9f856deb;
@@ -29,5 +29,9 @@ li {
 
 .link {
     text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Roboto' sans-serif;
     color: black;
+    margin: 0;
+    padding-block: 10px;
 }
