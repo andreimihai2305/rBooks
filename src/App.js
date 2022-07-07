@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  
 } from "react-router-dom";
 import './App.css';
 import AddBook from "./components/AddBook/AddBook";
@@ -21,6 +20,7 @@ function App() {
             <Route exact path="/add-book" element={<AddBook/>}/> 
             <Route exact path="/book-list" element={<BooksList/>}/> 
             <Route exact path="/" element={<Home/>}/> 
+            <Route exact path="*" element={<Home/>}/> 
           </Routes>
       </Router>
       </main>
