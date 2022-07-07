@@ -17,7 +17,7 @@ const demoBooks = [
     {
         title: "A Brief History of Time",
         subtitle: null,
-        author: "Stephen Hawking",
+        author: "Stephen W. Hawking",
         yearPublished: 1988
     },
     {
@@ -60,14 +60,14 @@ function BooksList() {
                     </ul>
                 </div>
                 <div className='books-list'>
-                    <h2 className='section-title'>Saved Books :</h2>
+                    <h2 className='section-title'>Saved books :</h2>
                     <ul className='book-ul'>
                         {listItems}
                     </ul>
                 </div>
 
                 <div className='books-list'>
-                    <h2 className='section-title'>Books You've read :</h2>
+                    <h2 className='section-title'>Books you've read :</h2>
                     <ul className='book-ul'>
                         {listItems}
                     </ul>

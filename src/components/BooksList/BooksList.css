@@ -2,19 +2,6 @@
     display: flex;
 }
 
-.page {
-    height: 100%;
-}
-
-.page-title {
-    margin-left: 1.8rem;
-    color: #e9e0c9;
-    text-shadow: 7px 0px 5px #43424F;
-    font-size: 2.7rem;
-    font-family: 'Roboto';
-    font-weight: 500;
-}
-
 .section-title {
     color: #e9e0c9;
     padding: 1rem 0;
@@ -30,24 +17,22 @@
     padding: 1.5rem;
     margin: 1em auto;
     border-radius: 15px;
+    background-color: #57423bf9;
     box-shadow: 10px 10px 20px #3C2F2C;
     overflow: scroll;
-    background-color: #57423bf9;
-    /* background-color: #43424F; */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  
 }
 .book {
-    font-family: 'Gulzar';
+    font-family: 'Gulzar' sans-serif;
     font-weight: 400;
     color: antiquewhite;
     padding-block: 0.3rem;
     margin-left: 0;
     list-style: none;
     border-bottom: 1px solid #9F856D;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.25em;
     cursor: auto;
-
 }
 .book-title {
     font-size: 1.5rem;
