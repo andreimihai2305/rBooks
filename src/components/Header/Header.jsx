@@ -18,7 +18,7 @@ function Header() {
                 </li>
                 <li>
                     <Link className='link' to='book-list'>
-                        <p>See Book List</p>
+                        <p>See Books List</p>
                     </Link>
                 </li>
             </ul>
