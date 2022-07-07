@@ -15,13 +15,19 @@ import demoBooks from'./components/demoBooks';
 function App() {
   const [books, setBooks] = useState(demoBooks);
 
+  function handleAddBook(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+  };
+
+
   return (
     <div>
       <main>
       <Router>
           <Header/>
           <Routes>
-            <Route exact path="/add-book" element={<AddBook/>}/> 
+            <Route exact path="/add-book" element={<AddBook onSubmit={handleAddBook}/>}/> 
             <Route exact path="/library" element={<Library books={books}/>}/> 
             <Route exact path="/" element={<Home/>}/> 
           </Routes>
