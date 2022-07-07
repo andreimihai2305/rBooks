@@ -18,9 +18,9 @@ function App() {
       <Router>
           <Header/>
           <Routes>
-            <Route path="/add-book" element={<AddBook/>}/> 
-            <Route path="/book-list" element={<BooksList/>}/> 
-            <Route path="/" element={<Home/>}/> 
+            <Route exact path="/add-book" element={<AddBook/>}/> 
+            <Route exact path="/book-list" element={<BooksList/>}/> 
+            <Route exact path="/" element={<Home/>}/> 
           </Routes>
       </Router>
       </main>
