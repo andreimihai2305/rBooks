@@ -18,7 +18,7 @@ const demoBooks = [
         subtitle: null,
         author: "Stephen W. Hawking",
         yearPublished: 1988,
-        tags: ['read', 'saved'] 
+        tags: ['read'] 
     },
     {
         title: "Crime and Punishment",
@@ -33,7 +33,29 @@ const demoBooks = [
         author: "Sigmund Freud",
         yearPublished: 1899,
         tags: ['inProgress', 'saved']
-    }
+    },
+    {
+        title: "Man and his Symbols",
+        subtitle: null,
+        author: "Carl G. Jung",
+        yearPublished: 1964,
+        tags: ['inProgress']
+    },
+    {
+        title: "A little History of Economics",
+        subtitle: null,
+        author: "Niall Kishtainy",
+        yearPublished: 2017,
+        tags: ['inProgress']
+    },
+    {
+        title: "Elon Musk, Tesla, SpaceX",
+        subtitle: null,
+        author: "Ashlee Vance",
+        yearPublished: 2015,
+        tags: ['read']
+    },
+
 ];
 
 export default demoBooks;

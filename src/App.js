@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import './App.css';
 import AddBook from "./components/AddBook/AddBook";
-// import BooksList from "./components/BooksList/BooksList";
 import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
