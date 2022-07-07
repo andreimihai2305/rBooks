@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import BooksList from '../BooksList/BooksList';
-import demoBooks from '../demoBooks';
 import './Library.css'
 
 
-function Library() {
-    const [books, setBooks] = useState(demoBooks);
-    // console.log(books);
+function Library(props) {
+    const { books } = props;
+
     return (
         <div className='page'>
             <h1 className='page-title'>Your Books</h1>
