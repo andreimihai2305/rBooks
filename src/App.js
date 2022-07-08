@@ -18,7 +18,7 @@ function App() {
   function handleAddBook(event) {
     event.preventDefault();
     const formInfo = event.target; 
-    console.log(formInfo.length);
+
 
     for (let i = 0; i < (formInfo.length -1); i++) {
       if (formInfo[i].value == '') {
@@ -42,8 +42,7 @@ function App() {
 
 
   return (
-    <div>
-      <main>
+    <main className="page">
       <Router>
           <Header/>
           <Routes>
@@ -52,8 +51,7 @@ function App() {
             <Route exact path="/" element={<Home/>}/> 
           </Routes>
       </Router>
-      </main>
-    </div>
+    </main>
   );
 }
 

@@ -3,6 +3,7 @@ import './AddBook.css';
 
 function AddBook(props) {
     const {onSubmit} = props;
+    
     return (
         <div className='page'>
             <h1 className='page-title'>Add a book</h1>
