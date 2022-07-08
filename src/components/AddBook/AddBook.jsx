@@ -12,12 +12,12 @@ function AddBook(props) {
                     <input className='add-book-input' type="text" name="title" id="title"/>
                 </div>
                 <div className='input-section'>
-                    <label htmlFor="title">Author: </label><br/>
-                    <input className='add-book-input' type="text" name="title" id="title"/>
+                    <label htmlFor="author">Author: </label><br/>
+                    <input className='add-book-input' type="text" name="author" id="author"/>
                 </div>
                 <div className='input-section'>
-                    <label htmlFor="title">Year published: </label><br/>
-                    <input className='add-book-input' type="text" name="title" id="title"/>
+                    <label htmlFor="year">Year published: </label><br/>
+                    <input className='add-book-input' type="text" name="year" id="year"/>
                 </div>
                 <button className="submit-button" type='submit'>Add Book</button>
             </form>

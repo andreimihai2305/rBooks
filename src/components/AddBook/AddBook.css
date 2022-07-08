@@ -44,4 +44,5 @@ label {
 .submit-button:active {
     background-color: #3C2F2C;
     color: #b39579;
+    transition-delay: 25ms;
 }

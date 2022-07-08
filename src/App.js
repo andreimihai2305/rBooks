@@ -3,14 +3,14 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  
 } from "react-router-dom";
-import './App.css';
 import AddBook from "./components/AddBook/AddBook";
 import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
 import demoBooks from'./components/demoBooks';
+import './App.css';
+
 
 function App() {
   const [books, setBooks] = useState(demoBooks);
@@ -18,6 +18,14 @@ function App() {
   function handleAddBook(event) {
     event.preventDefault();
     const formInfo = event.target; 
+    console.log(formInfo.length);
+
+    for (let i = 0; i < (formInfo.length -1); i++) {
+      if (formInfo[i].value == '') {
+        alert("Book info is empty or incomplete, cannot add book");
+        return;
+      }
+    }
 
     const newBook = {
       title: formInfo[0].value,
@@ -29,7 +37,7 @@ function App() {
 
     if (!books.some(book => book.title === newBook.title)) setBooks([...books, newBook]);
 
-    console.log(books);
+
   };
 
 
