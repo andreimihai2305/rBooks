@@ -17,8 +17,8 @@ function Header() {
                     </Link>
                 </li>
                 <li>
-                    <Link className='link' to='book-list'>
-                        <p>See Books List</p>
+                    <Link className='link' to='library'>
+                        <p>See library</p>
                     </Link>
                 </li>
             </ul>

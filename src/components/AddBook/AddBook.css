@@ -8,7 +8,6 @@ label {
 .book-form {
     padding: 2rem;
     margin: 0 5rem;
-    /* height: 50vh; */
     width: 25vw;
     border-radius: 15px;
     background-color: #43424ff8;
@@ -39,4 +38,11 @@ label {
     background-color: #9F856D;
     border: none;
     border-radius: 15px;
+    cursor: pointer;
+}
+
+.submit-button:active {
+    background-color: #3C2F2C;
+    color: #b39579;
+    transition-delay: 25ms;
 }
