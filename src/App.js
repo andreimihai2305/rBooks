@@ -15,9 +15,21 @@ import demoBooks from'./components/demoBooks';
 function App() {
   const [books, setBooks] = useState(demoBooks);
 
-  function handleAddBook(e) {
-    e.preventDefault();
-    console.log(e.target.value);
+  function handleAddBook(event) {
+    event.preventDefault();
+    const formInfo = event.target; 
+
+    const newBook = {
+      title: formInfo[0].value,
+      subtitle: null,
+      author: formInfo[1].value,
+      yearPublished: formInfo[2].value,
+      tags: ['saved'] 
+    };
+
+    if (!books.some(book => book.title === newBook.title)) setBooks([...books, newBook]);
+
+    console.log(books);
   };
 
 
