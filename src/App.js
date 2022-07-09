@@ -21,7 +21,7 @@ function App() {
 
 
     for (let i = 0; i < (formInfo.length -1); i++) {
-      if (formInfo[i].value == '') {
+      if (formInfo[i].value === '') {
         alert("Book info is empty or incomplete, cannot add book");
         return;
       }
