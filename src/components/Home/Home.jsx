@@ -19,15 +19,43 @@ function Home() {
             'rgb(54, 162, 235)',
             'rgb(255, 205, 86)'
           ],
-          hoverOffset: 4
-        }]
+          hoverOffset: 4,
+        }],
+
+        
+
+        // options :{
+        //        labels: {
+        //           fontColor: 'red' //set your desired color
+        //        }
+        //  }
       };
 
+    const options = {
+      plugins: {
+        title: {
+          display: true,
+          text: "First Chart",
+          color: "white"
+        },
+        background: {color: 'white'},        
+        legend: {
+          labels: {
+            color: 'white',
+            font: {
+              size: 18
+            }
+          }
+        }
+      }
+    }
+
+
     return (
-        <div style={{"max-width": "400px"}}>
+        <div style={{"maxWidth": "400px"}}>
 
             <h1>Home</h1>
-            <Doughnut data={data}/>
+            <Doughnut data={data}  options={options}/>
         </div>
     );
 }
