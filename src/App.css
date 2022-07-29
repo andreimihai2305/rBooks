@@ -18,3 +18,20 @@ body {
     font-family: 'Roboto';
     font-weight: 500;
 }
+
+
+.charts {
+    display: flex;
+    width: 30vw;
+    margin-left: 4vw;
+
+
+}
+
+@media only screen and (max-width: 500px)  {
+    .charts {
+        display: block;
+        width: 30vw;
+        margin-left: 4vw;
+    }
+}

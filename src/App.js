@@ -48,7 +48,7 @@ function App() {
           <Routes>
             <Route exact path="/add-book" element={<AddBook onSubmit={handleAddBook}/>}/> 
             <Route exact path="/library" element={<Library books={books}/>}/> 
-            <Route exact path="/" element={<Home/>}/> 
+            <Route exact path="/" element={<Home books={books}/>}/> 
             <Route exact path="*" element={<Home/>}/> 
           </Routes>
       </Router>

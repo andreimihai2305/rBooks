@@ -14,6 +14,20 @@ const demoBooks = [
         tags: ['saved']
     },
     {
+        title: "Chaos",
+        subtitle: null,
+        author: "James GLeick",
+        yearPublished: 2017,
+        tags: ['inProgress']
+    },
+    {
+        title: "Invetile Mele",
+        subtitle: null,
+        author: "Nikola Tesla",
+        yearPublished: 2017,
+        tags: ['read']
+    },
+    {
         title: "A Brief History of Time",
         subtitle: null,
         author: "Stephen W. Hawking",
