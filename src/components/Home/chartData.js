@@ -1,5 +1,3 @@
-import demoBooks from "../demoBooks";
-
 const getChartData = (_labels, _data) => {
   const data = {
       labels: _labels,
@@ -55,10 +53,6 @@ const getDataValue = (books) => {
   return [inProgress.length, saved.length, read.length];
 
 }
-
-// console.log(getDataValue(demoBooks, "inProgress"));
-
-
 
 
 
