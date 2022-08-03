@@ -8,7 +8,7 @@ import AddBook from "./components/AddBook/AddBook";
 import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
-import demoBooks from'./components/demoBooks';
+import demoBooks from'./demoBooks';
 import './App.css';
 
 
@@ -48,8 +48,8 @@ function App() {
           <Routes>
             <Route exact path="/add-book" element={<AddBook onSubmit={handleAddBook}/>}/> 
             <Route exact path="/library" element={<Library books={books}/>}/> 
-            <Route exact path="/" element={<Home books={books}/>}/> 
-            <Route exact path="*" element={<Home books={books}/>}/> 
+            <Route exact path="/" element={<Home />}/> 
+            <Route exact path="*" element={<Home />}/> 
           </Routes>
       </Router>
     </main>
