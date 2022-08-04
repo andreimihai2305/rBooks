@@ -20,7 +20,7 @@ function App() {
     .then(res => res.json())
     .then(books => setBooks(books))
     .catch(error => {
-      console.log(`Error occured!\n ${error}`);
+      console.error(`Error occured!\n ${error.message}`);
       setBooks(demoBooks);
     });
   }, []);
