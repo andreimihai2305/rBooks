@@ -8,6 +8,7 @@ import AddBook from "./components/AddBook/AddBook";
 import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
+import demoBooks from "./demoBooks";
 import './App.css';
 
 
@@ -17,7 +18,11 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:3001/books-list')
     .then(res => res.json())
-    .then(books => setBooks(books));
+    .then(books => setBooks(books))
+    .catch(error => {
+      console.log(`Error occured!\n ${error}`);
+      setBooks(demoBooks);
+    });
   }, []);
 
 
