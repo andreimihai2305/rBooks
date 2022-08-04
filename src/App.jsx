@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,13 +8,20 @@ import AddBook from "./components/AddBook/AddBook";
 import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
-import demoBooks from'./demoBooks';
 import './App.css';
 
 
 function App() {
-  const [books, setBooks] = useState(demoBooks);
+  const [books, setBooks] = useState([]);
 
+  useEffect(() => {
+    fetch('http://localhost:3001/books-list')
+    .then(res => res.json())
+    .then(books => setBooks(books));
+  }, []);
+
+
+  // Have to rewrite this event handler
   function handleAddBook(event) {
     event.preventDefault();
     const formInfo = event.target; 

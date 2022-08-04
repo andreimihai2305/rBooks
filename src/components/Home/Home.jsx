@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+function Home() {
   return (
       <section>
           <h1 className='page-title'>Home</h1>
