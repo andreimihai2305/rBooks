@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+*.pdf
 # production
 /build
 
