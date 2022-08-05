@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import AddBook from "./components/FindBook/FindBook";
+import FindBook from "./components/FindBook/FindBook";
 import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
@@ -58,7 +58,7 @@ function App() {
       <Router>
           <Header/>
           <Routes>
-            <Route exact path="/add-book" element={<AddBook onSubmit={handleAddBook}/>}/> 
+            <Route exact path="/add-book" element={<FindBook onSubmit={handleAddBook}/>}/> 
             <Route exact path="/library" element={<Library books={books}/>}/> 
             <Route exact path="/" element={<Home />}/> 
             <Route exact path="*" element={<Home />}/> 

@@ -2,7 +2,7 @@ import React from 'react';
 import './FindBook.css';
 
 
-function AddBook(props) {
+function FindBook(props) {
     const {onSubmit} = props;
 
     return (
@@ -15,4 +15,4 @@ function AddBook(props) {
     );
 }
 
-export default AddBook;
+export default FindBook;
