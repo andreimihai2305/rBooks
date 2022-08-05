@@ -1,7 +1,4 @@
-
-
-
-const demoBooks= [
+const demoBooks = [
     {
         title: "Beyond Good and Evil",
         subtitle: "Prelude to a Philosophy of the Future",
@@ -18,17 +15,10 @@ const demoBooks= [
     },
     {
         title: "Chaos",
-        subtitle: null,
+        subtitle: "Making a new science",
         author: "James GLeick",
-        yearPublished: 2017,
+        yearPublished: 1987,
         tags: ['inProgress']
-    },
-    {
-        title: "Invetile Mele",
-        subtitle: null,
-        author: "Nikola Tesla",
-        yearPublished: 2017,
-        tags: ['read']
     },
     {
         title: "A Brief History of Time",
@@ -67,12 +57,13 @@ const demoBooks= [
     },
     {
         title: "Elon Musk, Tesla, SpaceX",
-        subtitle: null,
+        subtitle: "and the quest for a fantastic future",
         author: "Ashlee Vance",
         yearPublished: 2015,
         tags: ['read']
     },
 
 ];
+
 
 export default demoBooks;

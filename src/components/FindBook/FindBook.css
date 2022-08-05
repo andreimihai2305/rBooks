@@ -1,0 +1,32 @@
+.find-book-content {
+    width: 70vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;  
+    background-color: #43424ff3;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.find-book-title {
+    text-align: center;
+    padding: 2rem 0 1.3 0;
+    /* margin-top: 20rem; */
+}
+
+.search-book {
+    width: 70%;
+    display: inline-block;
+    margin: 0 auto;
+    
+}
+
+.search-input {
+    width: 100%;
+    height: 2rem;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    
+}
+
