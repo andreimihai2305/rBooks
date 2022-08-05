@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Book from '../Book/Book';
 import './FindBook.css';
 
 
@@ -10,12 +11,7 @@ function FindBook(props) {
 
     const filteredBooks = books.filter(book => book.title.toLowerCase().includes(query.toLowerCase()));
     const renderedBooks = filteredBooks.map(book => 
-        <div className='book' key={book.title}>
-            <h3 className='search-book-title'>{book.title}</h3>
-            {book.subtitle && <p className='search-book-subtitle'> {book.subtitle}</p>}
-            <p>by {book.author}</p>
-            <p>year: {book.yearPublished}</p>
-        </div>
+        <Book key={book.title} book={book}/>
     );
 
  
