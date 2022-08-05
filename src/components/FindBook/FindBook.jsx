@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Book from '../Book/Book';
+import Book from '../BooksRelatedComponents/Book/Book';
 import './FindBook.css';
 
 

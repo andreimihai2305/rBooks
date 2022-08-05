@@ -8,6 +8,7 @@ import FindBook from "./components/FindBook/FindBook";
 import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
+import BookPage from "./components/BooksRelatedComponents/BookPage/BookPage";
 import demoBooks from "./demoBooks";
 import './App.css';
 
@@ -24,6 +25,7 @@ function App() {
       setBooks(demoBooks);
     });
   }, []);
+  
 
 
 
@@ -34,6 +36,7 @@ function App() {
           <Routes>
             <Route exact path="/find" element={<FindBook books={books}/>}/> 
             <Route exact path="/library" element={<Library books={books}/>}/> 
+            <Route exact path="book/:title" element={<BookPage books={books} />}/>
             <Route exact path="/" element={<Home />}/> 
             <Route exact path="*" element={<Home />}/> 
           </Routes>
