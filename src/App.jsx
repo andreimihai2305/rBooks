@@ -26,39 +26,13 @@ function App() {
   }, []);
 
 
-  // Have to rewrite this event handler
-  function handleAddBook(event) {
-    event.preventDefault();
-    const formInfo = event.target; 
-
-
-    for (let i = 0; i < (formInfo.length -1); i++) {
-      if (formInfo[i].value === '') {
-        alert("Book info is empty or incomplete, cannot add book");
-        return;
-      }
-    }
-
-    const newBook = {
-      title: formInfo[0].value,
-      subtitle: null,
-      author: formInfo[1].value,
-      yearPublished: formInfo[2].value,
-      tags: ['saved'] 
-    };
-
-    if (!books.some(book => book.title === newBook.title)) setBooks([...books, newBook]);
-
-
-  };
-
 
   return (
     <main className="page">
       <Router>
           <Header/>
           <Routes>
-            <Route exact path="/add-book" element={<FindBook onSubmit={handleAddBook}/>}/> 
+            <Route exact path="/find" element={<FindBook books={books}/>}/> 
             <Route exact path="/library" element={<Library books={books}/>}/> 
             <Route exact path="/" element={<Home />}/> 
             <Route exact path="*" element={<Home />}/> 
