@@ -4,10 +4,11 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import AddBook from "./components/AddBook/AddBook";
+import FindBook from "./components/FindBook/FindBook";
 import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
+import BookPage from "./components/BooksRelatedComponents/BookPage/BookPage";
 import demoBooks from "./demoBooks";
 import './App.css';
 
@@ -20,37 +21,12 @@ function App() {
     .then(res => res.json())
     .then(books => setBooks(books))
     .catch(error => {
-      console.log(`Error occured!\n ${error}`);
+      console.error(`Error occured!\n ${error.message}`);
       setBooks(demoBooks);
     });
   }, []);
+  
 
-
-  // Have to rewrite this event handler
-  function handleAddBook(event) {
-    event.preventDefault();
-    const formInfo = event.target; 
-
-
-    for (let i = 0; i < (formInfo.length -1); i++) {
-      if (formInfo[i].value === '') {
-        alert("Book info is empty or incomplete, cannot add book");
-        return;
-      }
-    }
-
-    const newBook = {
-      title: formInfo[0].value,
-      subtitle: null,
-      author: formInfo[1].value,
-      yearPublished: formInfo[2].value,
-      tags: ['saved'] 
-    };
-
-    if (!books.some(book => book.title === newBook.title)) setBooks([...books, newBook]);
-
-
-  };
 
 
   return (
@@ -58,8 +34,9 @@ function App() {
       <Router>
           <Header/>
           <Routes>
-            <Route exact path="/add-book" element={<AddBook onSubmit={handleAddBook}/>}/> 
+            <Route exact path="/find" element={<FindBook books={books}/>}/> 
             <Route exact path="/library" element={<Library books={books}/>}/> 
+            <Route exact path="book/:title" element={<BookPage books={books} />}/>
             <Route exact path="/" element={<Home />}/> 
             <Route exact path="*" element={<Home />}/> 
           </Routes>

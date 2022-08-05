@@ -8,16 +8,16 @@ function Header() {
             <ul className='navbar-list'>
                 <li>
                     <Link className='link' to='/'>
-                        <h1 className='logo'>rBooks</h1>
+                        <p className='logo'>rBooks</p>
                     </Link>
                 </li>
                 <li>
-                    <Link className='link' to='add-book'>
-                        <p>Add Book</p>
+                    <Link className='link' to='/find'>
+                        <p>Find Book</p>
                     </Link>
                 </li>
                 <li>
-                    <Link className='link' to='library'>
+                    <Link className='link' to='/library'>
                         <p>See library</p>
                     </Link>
                 </li>

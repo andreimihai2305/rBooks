@@ -1,6 +1,6 @@
 
 .section-title {
-    color: #e9e0c9;
+    color: white;
     padding: 1rem 0;
     font-size: 1.8rem;
     font-family: "Roboto Slab";
@@ -19,27 +19,6 @@
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  
-}
-.book {
-    font-family: 'Gulzar' sans-serif;
-    font-weight: 400;
-    color: antiquewhite;
-    padding-block: 0.3rem;
-    margin-left: 0;
-    list-style: none;
-    border-bottom: 1px solid #9F856D;
-    margin-bottom: 0.25em;
-    cursor: auto;
-}
-.book-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.book-info {
-    font-size: 1.2rem;
-    list-style: none;
-    margin-bottom: 0;
 }
 
 .books-list::-webkit-scrollbar {
