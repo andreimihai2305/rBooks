@@ -1,10 +1,12 @@
 import React from 'react';
-import BooksList from '../BooksList/BooksList';
+import BooksList from '../BooksRelatedComponents/BooksList/BooksList';
 import './Library.css'
+
 
 
 function Library(props) {
     const { books } = props;
+
     return (
         <div className='page'>
             <h1 className='page-title'>Your Books</h1>

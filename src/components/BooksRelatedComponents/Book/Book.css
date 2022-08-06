@@ -9,6 +9,16 @@
     margin-bottom: 0.25em;
     cursor: auto;
     letter-spacing: 0.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.see-book {
+    height: 2.5rem;
+    width: 6rem;
+    margin-bottom: 1.5rem;
+
 }
 
 .book-title {
@@ -16,7 +26,8 @@
     font-weight: 500;
 }
 .book-subtitle {
-    margin-top: 0.4rem
+    margin-top: 0.4rem;
+    color: white
 }
 
 .book-info {
