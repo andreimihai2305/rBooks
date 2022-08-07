@@ -1,45 +1,29 @@
-import React, {useState, useEffect} from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BookPage from "./components/BooksRelatedComponents/BookPage/BookPage";
 import FindBook from "./components/FindBook/FindBook";
-import Header from './components/Header/Header';
+import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
-import demoBooks from "./demoBooks";
-import './App.css';
-
+import BooksProvider from "./contexts/BooksContext";
+import "./App.css";
+import SignIn from "./components/SignIn/SignIn";
 
 function App() {
-  const [books, setBooks] = useState([]);
-
-  useEffect(() => {
-
-    fetch('http://localhost:3001/books-list')
-    .then(res => res.json())
-    .then(books => setBooks(books))
-    .catch(error => {
-      console.error(`Error occured!\n ${error.message}`);
-      setBooks(demoBooks);
-    });
-  }, []);
-  
-
-
   return (
     <main className="page">
       <Router>
-          <Header/>
+        <Header />
+        <BooksProvider>
           <Routes>
-              <Route exact path="/find" element={<FindBook books={books}/>}/> 
-              <Route exact path="/library" element={<Library books={books}/>}/> 
-              <Route exact path="/book/:title" element={<BookPage books={books} />}/>
-              <Route exact path="/" element={<Home />}/> 
-              <Route exact path="*" element={<Home />}/> 
+            <Route exact path="/sign-in" element={<SignIn />} />
+            <Route exact path="/find" element={<FindBook />} />
+            <Route exact path="/library" element={<Library />} />
+            <Route exact path="/book/:title" element={<BookPage />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="*" element={<Home />} />
           </Routes>
+        </BooksProvider>
       </Router>
     </main>
   );
