@@ -37,6 +37,7 @@ body {
   border: none;
   font-weight: 600;
   color: #252429;
+  cursor: pointer;
 }
 
 .link-button:hover {
