@@ -16,7 +16,6 @@ export default function BooksProvider({ children }) {
         setBooks(demoBooks);
       });
   }, []);
-  console.log(books);
   return (
     <BooksContext.Provider value={{ books }}>{children}</BooksContext.Provider>
   );

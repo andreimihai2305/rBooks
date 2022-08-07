@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
 import BooksProvider from "./contexts/BooksContext";
 import "./App.css";
+import SignIn from "./components/SignIn/SignIn";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <BooksProvider>
           <Routes>
+            <Route exact path="/sign-in" element={<SignIn />} />
             <Route exact path="/find" element={<FindBook />} />
             <Route exact path="/library" element={<Library />} />
             <Route exact path="/book/:title" element={<BookPage />} />

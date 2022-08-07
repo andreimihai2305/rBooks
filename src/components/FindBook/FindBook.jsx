@@ -3,7 +3,7 @@ import { useBooks } from "../../contexts/BooksContext";
 import Book from "../BooksRelatedComponents/Book/Book";
 import "./FindBook.css";
 
-function FindBook(props) {
+function FindBook() {
   const { books } = useBooks();
 
   const [query, setQuery] = useState("");
@@ -11,6 +11,7 @@ function FindBook(props) {
   const filteredBooks = books.filter((book) =>
     book.title.toLowerCase().includes(query.toLowerCase())
   );
+
   const renderedBooks = filteredBooks.map((book) => (
     <Book key={book.title} book={book} />
   ));
