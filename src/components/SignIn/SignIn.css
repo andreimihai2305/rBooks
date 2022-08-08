@@ -1,0 +1,45 @@
+.title-signin {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.sign-in-label {
+  margin: 0;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem;
+  box-sizing: border-box;
+  background-color: #43424ffa;
+  width: 50vw;
+  margin: auto auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 50vh;
+}
+label {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.form-input {
+  width: 75%;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.submit {
+  margin: 1rem 0;
+  width: 15%;
+  text-align: center;
+  padding: 0;
+  font-weight: 600;
+  font-family: "Roboto" "Courier New", Courier, monospace;
+}

@@ -11,10 +11,12 @@ function FindBook() {
   const filteredBooks = books.filter((book) =>
     book.title.toLowerCase().includes(query.toLowerCase())
   );
-
-  const renderedBooks = filteredBooks.map((book) => (
-    <Book key={book.title} book={book} />
-  ));
+  let renderedBooks;
+  if (filteredBooks) {
+    renderedBooks = filteredBooks.map((book) => (
+      <Book key={book.title} book={book} />
+    ));
+  }
 
   return (
     <div className="find-book-content">
