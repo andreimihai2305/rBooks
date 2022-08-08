@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import demoBooks from "../demoBooks";
 const BooksContext = React.createContext({});
 
-export const useBooks = () => useContext(BooksContext);
+export function useBooks() {
+  return useContext(BooksContext);
+}
 
 export default function BooksProvider({ children }) {
   const [books, setBooks] = useState([]);
@@ -13,7 +14,6 @@ export default function BooksProvider({ children }) {
       .then((books) => setBooks(books))
       .catch((error) => {
         console.error(`Error occured!\n ${error.message}`);
-        setBooks(demoBooks);
       });
   }, []);
   return (
