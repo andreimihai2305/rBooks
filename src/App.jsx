@@ -7,72 +7,45 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Library from "./components/Library/Library";
 import SignIn from "./components/SignIn/SignIn";
-import UserProvider from "./contexts/UserContext";
+import UserProvider, { useUser } from "./contexts/UserContext";
 import makeRequest from "./services/makeRequest";
 import "./App.css";
 
 function App() {
-  const [user, setUser] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  // const [user, setUser] = useUser();
 
-  function handleSignIn(event, username, password) {
-    console.log(username, password);
-    event.preventDefault();
+  // function handleSignIn(event, username, password) {
+  //   event.preventDefault();
 
-    if (!username || !password) {
-      setErrorMessage("User or password input cannot be empty");
-      return;
-    }
+  //   if (!username || !password) {
+  //     return setErrorMessage("User or password input cannot be empty");
+  //   }
 
-    const user = {
-      username: username,
-      password: password,
-    };
+  //   const user = {
+  //     username: username,
+  //     password: password,
+  //   };
 
-    makeRequest("/user", {
-      method: "GET",
-      body: JSON.stringify(user),
-    }).then((user) => setUser(user));
-  }
+  //   makeRequest("/user", user).then((response) => {
+  //     if (response.status === 200) return setUser(response.data);
+  //     console.log(response);
+  //     return setErrorMessage(response.data.errorMessage);
+  //   });
 
+  //   return;
+  // }
   return (
     <main className="page">
-      {user && <Header />}
-      <UserProvider value={user}>
+      <UserProvider>
+        <Header />
         <BooksProvider>
           <Routes>
-            <Route
-              exact
-              path="/sign-in"
-              element={
-                <SignIn errorMessage={errorMessage} onSubmit={handleSignIn} />
-              }
-            />
-            <Route
-              exact
-              path="/find"
-              element={user ? <FindBook /> : <Navigate replace to="/sign-in" />}
-            />
-            <Route
-              exact
-              path="/library"
-              element={user ? <Library /> : <Navigate replace to="/sign-in" />}
-            />
-            <Route
-              exact
-              path="/book/:title"
-              element={user ? <BookPage /> : <Navigate replace to="/sign-in" />}
-            />
-            <Route
-              exact
-              path="/"
-              element={user ? <Home /> : <Navigate replace to="/sign-in" />}
-            />
-            <Route
-              exact
-              path="*"
-              element={user ? <Home /> : <Navigate replace to="/sign-in" />}
-            />
+            <Route exact path="/sign-in" element={<SignIn />} />
+            <Route exact path="/find" element={<FindBook />} />
+            <Route exact path="/library" element={<Library />} />
+            <Route exact path="/book/:title" element={<BookPage />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="*" element={<Home />} />
           </Routes>
         </BooksProvider>
       </UserProvider>

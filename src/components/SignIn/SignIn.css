@@ -1,10 +1,11 @@
 .title-signin {
+  margin-top: 4rem;
   text-align: center;
   font-size: 3.5rem;
 }
 
 .sign-in-label {
-  margin: 0;
+  margin: 1.5rem 0 1rem 0;
   color: white;
   text-align: center;
   font-size: 1.3rem;

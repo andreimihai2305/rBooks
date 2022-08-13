@@ -1,11 +1,12 @@
-async function makeRequest(url, options = {}) {
-  console.log(options);
-  const response = await fetch(`http://localhost:3001${url}`, {
-    ...options,
-  }).catch((error) =>
-    Promise.reject(error?.response?.data?.message ?? "Error")
-  );
-  return response.json();
+import axios from "axios";
+
+async function makeRequest(url, data = {}) {
+  const response = await axios
+    .post(`http://localhost:3001${url}`, data)
+    .catch((error) =>
+      Promise.reject(error?.response?.data?.message ?? "Error")
+    );
+  return response;
 }
 
 export default makeRequest;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BooksProvider, { useBooks } from "../../contexts/BooksContext";
+import { useBooks } from "../../contexts/BooksContext";
 import Book from "../BooksRelatedComponents/Book/Book";
 import "./FindBook.css";
 
@@ -19,29 +19,25 @@ function FindBook() {
   }
 
   return (
-    <BooksProvider>
-      <div className="find-book-content">
-        <h1 className="page-title find-book-title">Find a Book</h1>
-        <div className="search-container">
-          <input
-            type="search"
-            value={query}
-            onChange={(event) => {
-              setQuery(event.target.value);
-            }}
-            autoFocus
-            placeholder="Search book title:"
-            className="search-input"
-          />
-        </div>
-
-        {renderedBooks && <div className="search-books">{renderedBooks}</div>}
-
-        {renderedBooks.length === 0 && (
-          <h2 className="not-found">No Books found, sorry.</h2>
-        )}
+    <div className="find-book-content">
+      <h1 className="page-title find-book-title">Find a Book</h1>
+      <div className="search-container">
+        <input
+          type="search"
+          value={query}
+          onChange={(event) => {
+            setQuery(event.target.value);
+          }}
+          autoFocus
+          placeholder="Search book title:"
+          className="search-input"
+        />
       </div>
-    </BooksProvider>
+
+      {renderedBooks && <div className="search-books">{renderedBooks}</div>}
+
+      {!renderedBooks && <h2 className="not-found">No Books found, sorry.</h2>}
+    </div>
   );
 }
 
